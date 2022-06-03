@@ -33,9 +33,9 @@ function medindoHumor(temperaturaDia1, temperaturaDia2, temperaturaDia3){
     }else if((temperaturaDia2 > temperaturaDia1) && (temperaturaDia3 <= temperaturaDia2)){
         humor = "2ª Figura: Triste"
     }else if((temperaturaDia3 > temperaturaDia2) && (temperaturaDia2 > temperaturaDia1)){  
-        humor = ((temperaturaDia3 - temperaturaDia2) < (temperaturaDia2 - temperaturaDia1)) ? "3ª Figura: Triste" : "4ª Figura: Feliz"
+        humor = (Math.abs((temperaturaDia3 - temperaturaDia2)) < Math.abs((temperaturaDia2 - temperaturaDia1))) ? "3ª Figura: Triste" : "4ª Figura: Feliz"
     }else if(((temperaturaDia3 < temperaturaDia2) &&(temperaturaDia2 < temperaturaDia1))){     
-        humor = ((temperaturaDia2 - temperaturaDia3) < (temperaturaDia1 - temperaturaDia2)) ? "5ª Figura: Triste" : "6ª Figura: Feliz"
+        humor = (Math.abs((temperaturaDia2 - temperaturaDia3)) < Math.abs((temperaturaDia1 - temperaturaDia2))) ? "5ª Figura: Triste" : "6ª Figura: Feliz"
     }else if((temperaturaDia2 == temperaturaDia1)){
         
         humor = (temperaturaDia3 > temperaturaDia2) ? "7ª Figura: Feliz" : humor = "8ª Figura: Triste"
